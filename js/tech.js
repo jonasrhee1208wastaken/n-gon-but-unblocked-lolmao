@@ -7073,7 +7073,7 @@ const tech = {
         frequencyDefault: 1,
         isInstant: true,
         allowed() {
-            return tech.haveGunCheck("drones", false) && !tech.isDroneRespawn && !tech.isExponential && tech.bulletsLastLonger === 1 && !tech.isDronesTravel && (build.isExperimentSelection || powerUps.research.count > 1)
+            return tech.haveGunCheck("drones", false) && !tech.isDroneRespawn && tech.bulletsLastLonger === 1 && !tech.isDronesTravel && (build.isExperimentSelection || powerUps.research.count > 1)
         },
         requires: "drones, not exponential growth, drone repair, anti-shear topology, autonomous navigation, ",
         effect() {
