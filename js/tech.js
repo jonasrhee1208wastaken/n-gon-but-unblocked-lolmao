@@ -7050,7 +7050,7 @@ const tech = {
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return !tech.isForeverDrones && (tech.haveGunCheck("drones") || (m.fieldMode === 4 && simulation.molecularMode === 3)) && (build.isExperimentSelection || powerUps.research.count > this.cost - 1)
+            return (tech.haveGunCheck("drones") || (m.fieldMode === 4 && simulation.molecularMode === 3)) && (build.isExperimentSelection || powerUps.research.count > this.cost - 1)
         },
         requires: "drones, not fault tolerance",
         effect() {
